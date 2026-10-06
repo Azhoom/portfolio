@@ -102,8 +102,6 @@ export const Home = () => {
         index={1}
         title="Esports World Cup (EWC AR 26)"
         description="Producer for the Arabic Studio broadcast during the Esports World Cup, supervising on-air content, talent coordination, and broadcast flow for top-tier international esports coverage."
-        buttonText="View broadcast"
-        buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
           alt: 'Esports World Cup Arabic Studio Stage',
@@ -123,8 +121,6 @@ export const Home = () => {
         index={2}
         title="Honor of Kings: World Finals & Egypt Qualifiers"
         description="Directing live stream production for the KIC World Finals and 12-day qualifiers, managing multi-stage screens, in-game visuals, and tournament operations."
-        buttonText="View tournament"
-        buttonLink="/projects/volkihar-knight"
         model={{
           type: 'phone',
           alt: 'Honor of Kings KIC World Finals Stage',
@@ -147,8 +143,6 @@ export const Home = () => {
         index={3}
         title="PUBG Mobile National Championship & Regionals"
         description="Directing live visuals, camera work, and broadcast flow across Egypt, Morocco, UAE, Jordan & Wildcard qualifiers, achieving 15K–20K peak concurrent viewership."
-        buttonText="View championship"
-        buttonLink="/projects/slice"
         model={{
           type: 'laptop',
           alt: 'PUBG Mobile National Championship Arena',
