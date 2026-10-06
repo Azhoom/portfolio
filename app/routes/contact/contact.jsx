@@ -16,6 +16,7 @@ import { baseMeta } from '~/utils/meta';
 import { Form, useActionData, useNavigation } from '@remix-run/react';
 import { json } from '@remix-run/cloudflare';
 import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+import adhamContact from '~/assets/adham-contact.jpg';
 import styles from './contact.module.css';
 
 export const meta = () => {
@@ -126,6 +127,34 @@ export const Contact = () => {
               data-status={status}
               style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
             />
+            <div
+              className={styles.profileHeader}
+              data-status={status}
+              style={getDelay(tokens.base.durationXS, initDelay, 0.45)}
+            >
+              <img
+                src={adhamContact}
+                alt="Adham Hamed"
+                className={styles.avatar}
+                width="80"
+                height="80"
+              />
+              <div className={styles.profileInfo}>
+                <h2 className={styles.profileName}>Adham Hamed</h2>
+                <p className={styles.profileRole}>Live Streaming Technical Director & Operator</p>
+                <div className={styles.profileContact}>
+                  <span>Cairo, Egypt</span>
+                  <span>•</span>
+                  <a href="mailto:adhamhamed47@gmail.com" className={styles.profileContactLink}>
+                    adhamhamed47@gmail.com
+                  </a>
+                  <span>•</span>
+                  <a href="tel:+201097163121" className={styles.profileContactLink}>
+                    +20 109 716 3121
+                  </a>
+                </div>
+              </div>
+            </div>
             {/* Hidden honeypot field to identify bots */}
             <Input
               className={styles.botkiller}

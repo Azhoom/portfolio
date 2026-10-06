@@ -1,4 +1,4 @@
-import pyramidsPubg from '~/assets/pyramids_pubg.jpg';
+import adhamContact from '~/assets/adham-contact.jpg';
 import profileImgPlaceholder from '~/assets/profile-placeholder.jpg';
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
@@ -75,11 +75,11 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   reveal
                   delay={100}
                   placeholder={profileImgPlaceholder}
-                  srcSet={`${pyramidsPubg} 480w, ${pyramidsPubg} 960w`}
+                  srcSet={`${adhamContact} 480w, ${adhamContact} 960w`}
                   width={960}
                   height={1280}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Adham Hamed operating at PUBG 8th Anniversary Egypt Pyramids Event"
+                  alt="Adham Hamed - Live Streaming Technical Director"
                 />
                 <svg className={styles.svg} data-visible={visible} viewBox="0 0 136 766">
                   <use href={`${katakana}#katakana-profile`} />
