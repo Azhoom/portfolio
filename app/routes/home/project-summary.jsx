@@ -25,6 +25,7 @@ export function ProjectSummary({
   index,
   title,
   description,
+  tags,
   model,
   buttonText,
   buttonLink,
@@ -86,8 +87,17 @@ export function ProjectSummary({
         >
           {title}
         </Heading>
-        <Text className={styles.description} data-visible={visible} as="p">
+        <Text className={styles.description} data-visible={visible} as="div">
           {description}
+          {tags && tags.length > 0 && (
+            <div className={styles.tagList}>
+              {tags.map((tag, i) => (
+                <span key={i} className={styles.tag}>
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </Text>
         {buttonLink && buttonText && (
           <div className={styles.button} data-visible={visible}>

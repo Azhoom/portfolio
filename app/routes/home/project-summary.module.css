@@ -255,6 +255,31 @@
     transform: none;
     opacity: 1;
   }
+
+  p {
+    margin-bottom: var(--spaceM);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spaceXS) var(--spaceS);
+  margin-top: var(--spaceM);
+}
+
+.tag {
+  font-size: var(--fontSizeBodyS);
+  color: var(--primary);
+  background: color-mix(in lab, var(--primary) 12%, transparent);
+  padding: 4px 10px;
+  border-radius: var(--spaceXS);
+  font-weight: var(--fontWeightMedium);
+  letter-spacing: 0.02em;
 }
 
 .button {

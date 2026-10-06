@@ -1,12 +1,11 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import ewcStage from '~/assets/ewc_stage.jpg';
-import hokStage from '~/assets/hok_kic_stage.jpg';
-import pmncArena from '~/assets/pmnc_arena.jpg';
+import ewcBroadcastLarge from '~/assets/ewc-broadcast-large.jpg';
+import ewcBroadcastPlaceholder from '~/assets/ewc-broadcast-placeholder.jpg';
+import hokBroadcastPhone1Large from '~/assets/hok-broadcast-phone1-large.jpg';
+import hokBroadcastPhone1Placeholder from '~/assets/hok-broadcast-phone1-placeholder.jpg';
+import hokBroadcastPhone2Large from '~/assets/hok-broadcast-phone2-large.jpg';
+import hokBroadcastPhone2Placeholder from '~/assets/hok-broadcast-phone2-placeholder.jpg';
+import pubgBroadcastLarge from '~/assets/pubg-broadcast-large.jpg';
+import pubgBroadcastPlaceholder from '~/assets/pubg-broadcast-placeholder.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -101,14 +100,24 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="Esports World Cup (EWC AR 26)"
-        description="Producer for the Arabic Studio broadcast during the Esports World Cup, supervising on-air content, talent coordination, and broadcast flow for top-tier international esports coverage."
+        description={
+          <>
+            <p>
+              Studio Producer for the official Arabic broadcast of the Esports World Cup in Riyadh. Managed on-air talent direction, live multilingual graphics routing, multi-camera transitions, and zero-latency instant replays across international championship stages.
+            </p>
+            <p>
+              Orchestrated talkback communications across director, technical crew, and broadcast analysts to maintain seamless pacing and stream stability throughout the multi-week global competition.
+            </p>
+          </>
+        }
+        tags={['Arabic Studio Producer', 'Live Switching', 'Observer Sync', 'Riyadh Arena']}
         model={{
           type: 'laptop',
-          alt: 'Esports World Cup Arabic Studio Stage',
+          alt: 'Esports World Cup official Arabic live broadcast',
           textures: [
             {
-              srcSet: `${ewcStage} 1280w, ${ewcStage} 2560w`,
-              placeholder: sprTexturePlaceholder,
+              srcSet: `${ewcBroadcastLarge} 1280w, ${ewcBroadcastLarge} 2560w`,
+              placeholder: ewcBroadcastPlaceholder,
             },
           ],
         }}
@@ -120,18 +129,28 @@ export const Home = () => {
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
         title="Honor of Kings: World Finals & Egypt Qualifiers"
-        description="Directing live stream production for the KIC World Finals and 12-day qualifiers, managing multi-stage screens, in-game visuals, and tournament operations."
+        description={
+          <>
+            <p>
+              Technical Broadcast Director commanding the 12-day qualifier marathon into the KIC World Finals. Directed multi-input vMix and NDI video routing across dual stages, team isolation cams, automated ban/pick telemetry, and live observer coordination.
+            </p>
+            <p>
+              Engineered real-time spectator feeds for high-impact teamfights and macro lane rotations, pairing live graphics overlays with caster commentary under strict broadcast timelines.
+            </p>
+          </>
+        }
+        tags={['Technical Director', '12-Day Qualifier Marathon', 'vMix & NDI Matrix', 'Stage Ops']}
         model={{
           type: 'phone',
-          alt: 'Honor of Kings KIC World Finals Stage',
+          alt: 'Honor of Kings KIC World Finals and Arab Championship live stream',
           textures: [
             {
-              srcSet: `${hokStage} 375w, ${hokStage} 750w`,
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: `${hokBroadcastPhone1Large} 375w, ${hokBroadcastPhone1Large} 750w`,
+              placeholder: hokBroadcastPhone1Placeholder,
             },
             {
-              srcSet: `${hokStage} 375w, ${hokStage} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${hokBroadcastPhone2Large} 375w, ${hokBroadcastPhone2Large} 750w`,
+              placeholder: hokBroadcastPhone2Placeholder,
             },
           ],
         }}
@@ -142,14 +161,24 @@ export const Home = () => {
         visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="PUBG Mobile National Championship & Regionals"
-        description="Directing live visuals, camera work, and broadcast flow across Egypt, Morocco, UAE, Jordan & Wildcard qualifiers, achieving 15K–20K peak concurrent viewership."
+        description={
+          <>
+            <p>
+              Technical Broadcast Director leading live production across 5 regional qualifiers—Egypt, Morocco, UAE, Jordan & Wildcard—scaling transmission to 15K–20K peak concurrent viewers.
+            </p>
+            <p>
+              Engineered 16-team battle royale observer switching, Dante audio mix-minus distribution for 8+ on-air talent, and multi-platform distribution across YouTube, TikTok Live, and Facebook Gaming.
+            </p>
+          </>
+        }
+        tags={['Multi-Region Director', '15K–20K Peak Viewers', '16-Team BR Observing', 'Dante Audio']}
         model={{
           type: 'laptop',
-          alt: 'PUBG Mobile National Championship Arena',
+          alt: 'PUBG Mobile National Championship and PMWC live broadcast stream',
           textures: [
             {
-              srcSet: `${pmncArena} 800w, ${pmncArena} 1920w`,
-              placeholder: sliceTexturePlaceholder,
+              srcSet: `${pubgBroadcastLarge} 1280w, ${pubgBroadcastLarge} 1920w`,
+              placeholder: pubgBroadcastPlaceholder,
             },
           ],
         }}
