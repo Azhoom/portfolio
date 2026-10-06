@@ -6,6 +6,8 @@ import hokBroadcastPhone2Large from '~/assets/hok-broadcast-phone2-large.jpg';
 import hokBroadcastPhone2Placeholder from '~/assets/hok-broadcast-phone2-placeholder.jpg';
 import pubgBroadcastLarge from '~/assets/pubg-broadcast-large.jpg';
 import pubgBroadcastPlaceholder from '~/assets/pubg-broadcast-placeholder.jpg';
+import pmgoStageLarge from '~/assets/pmgo-stage-large.jpg';
+import pmgoStagePlaceholder from '~/assets/pmgo-stage-placeholder.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -49,10 +51,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -179,6 +182,35 @@ export const Home = () => {
             {
               srcSet: `${pubgBroadcastLarge} 1280w, ${pubgBroadcastLarge} 1920w`,
               placeholder: pubgBroadcastPlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="PUBG Mobile Global Open (PMGO: Road to EWC)"
+        description={
+          <>
+            <p>
+              Lead Producer and Technical Director (TD) for the PUBG Mobile Global Open (PMGO) — Road to EWC championship studio broadcast. Held complete operational authority over live production, directing the on-air narrative flow, show rundowns, talent pacing, and multi-camera live switching from the main gallery.
+            </p>
+            <p>
+              Engineered the broadcast studio infrastructure: programmed switcher automation, mapped live tournament telemetry to the massive stage LED display, directed multi-angle camera choreography and lighting cues, and maintained low-latency inter-departmental talkback under high-stakes international tournament conditions.
+            </p>
+          </>
+        }
+        tags={['Lead Producer & TD', 'Road to EWC', 'Studio Directing', 'Switcher Automation', 'Dante & NDI']}
+        model={{
+          type: 'laptop',
+          alt: 'PUBG Mobile Global Open Road to EWC Broadcast Studio Stage',
+          textures: [
+            {
+              srcSet: `${pmgoStageLarge} 1280w, ${pmgoStageLarge} 2560w`,
+              placeholder: pmgoStagePlaceholder,
             },
           ],
         }}
