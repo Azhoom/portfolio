@@ -108,6 +108,26 @@
       top: 10%;
       left: 0;
     }
+
+    .summary[data-alternate='true'] & {
+      left: -28%;
+      --width: 130%;
+
+      @media (--mediaDesktop) {
+        --width: 130%;
+      }
+
+      @media (--mediaLaptop) {
+        left: -24%;
+        --width: 120%;
+      }
+
+      @media (--mediaTablet) {
+        top: 10%;
+        left: 0;
+        --width: 130%;
+      }
+    }
   }
 
   &[data-device='phone'] {
@@ -172,6 +192,19 @@
 
     @media (--mediaMobile) {
       right: 0;
+    }
+
+    .summary[data-alternate='true'] & {
+      right: auto;
+      left: -36%;
+
+      @media (--mediaTablet) {
+        left: -10%;
+      }
+
+      @media (--mediaMobile) {
+        left: 0;
+      }
     }
   }
 
