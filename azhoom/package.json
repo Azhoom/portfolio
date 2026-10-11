@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "azhoom",
   "homepage": "https://adhamhamed.com",
   "description": "Portfolio site for Adham Hamed",
-  "repository": "https://github.com/adhamhamed/portfolio.git",
+  "repository": "https://github.com/Azhoom/portfolio.git",
   "author": "Adham Hamed",
   "sideEffects": false,
   "type": "module",
